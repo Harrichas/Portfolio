@@ -42,7 +42,7 @@
 
   .row {
     display: block;
-    min-height: 100px;
+    float: left;
     height: 100%;
     width: 100%;
     padding-left: 10%;
@@ -61,29 +61,32 @@
         border-left: 5px solid lime;
         margin-top: 5%;
 }
-
+ /*Projects*/
  
-    #Scratch {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        min-height: 100%;
-        margin: 5rem 2rem;
-        outline: 2px dashed white;
-        transition: all 0.5s ease-in-out;
-    
+    .img-border {
+        border: 2px dashed white;
     }
-    #Scratch h2 {
-        position: relative;
+    .project-card {
+      float:left;
+      margin-right: 5%;
+      margin-top: 5%;
+    }
+
+    .project-card h2 {
         background-color: gray;
         color: purple;
         border: 2px solid white;
         border-radius: 8px;
-        transition: all 0.5s ease-in-out;
-        top: -4rem;
-        margin: 0 auto;
-        width: 95%;
     }
+
+    .clear-fix {
+      clear:both;
+    }
+
+    .social-icon {
+      margin: 5%;
+    }
+
 
 
 
