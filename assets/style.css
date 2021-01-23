@@ -13,7 +13,7 @@
         align-items: center;
         padding: 10%;
         background-image: url("../images/cool-background.png");
-
+        background-size: cover;
   }
 
   header nav ul li {
@@ -72,19 +72,13 @@
       margin-top: 5%;
     }
 
-    .project-card h2 {
+    .project-card .double {
         background-color: gray;
         color: purple;
         border: 2px solid white;
         border-radius: 8px;
     }
 
-    .project-card p {
-      background-color: gray;
-      color: purple;
-      border: 2px solid white;
-      border-radius: 8px;
-  }
 
     .clear-fix {
       clear:both;
