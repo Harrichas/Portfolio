@@ -12,21 +12,24 @@
      
 </head>
 <body>
-    
+    <nav class="header">
+        <input class="menu-btn" type="checkbox" id="menu-btn"/>
+        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
+                <li><a href="#About-Me" id="about-link">About Me</a></li>
+                <li><a href="#Projects" id="project-link">Projects</a></li>
+                <li><a href="#ContactInfo" id="contact-link">Contact Info</a></li>
+                <li><a href="#resume" id="resume-link">Resume</a></li>
+            </ul>
+    </nav>
     
     <header>
         
         <h1 class="name">Chase Harrington</h1>
 
-        <img src="./images/profile-pic.png" alt="Chase picture" width="250" hieght= "250">
-
-        <nav>
-            <ul>
-                <li><a href="#About-Me" id="about-link">About Me</a></li>
-                <li><a href="#Projects" id="project-link">Projects</a></li>
-                <li><a href="#ContactInfo" id="contact-link">Contact Info</a></li>
-            </ul>
-        </nav>
+        <img src="./images/profile-pic.png" alt="Chase picture" width="250" height= "250" class="picture">
+        
+        
     </header>
 
     <main>
@@ -40,7 +43,7 @@
                 My current hobbies are playing video games and coding. I wanted to be an Paleontologist growing up as well as a veterinarian.
                 Now I am looking for a better opportunity as a carrer. Below are a few of my projects that I have been working on.
                 Also below is my resume and ways to contact me.</p> <br>
-                <p>So far I have learned how to use Javascript, CSS, HTML, how to use API's, and I am currently learning to use Node.JS.</p>
+                <p>So far I have learned how to use Javascript, CSS, HTML, how to use API's, Node.js, how to deploy to Heroku, and MySQL.</p>
             </article>
          </section>
         </div>
@@ -108,6 +111,23 @@
                     <img class="img-border" src="./images/burger.png" alt="Eat Da Burger" width="200" height="200">
                     </a>
                 </div>
+                <div class="project-card">
+                    <div class="double">
+                        <h2>Note Taker</h2>
+                    </div>
+                    <a href="https://warm-wave-82515.herokuapp.com/" target="blank">
+                    <img class="img-border" src="./images/note_taker.png" alt="Note Taker" width="200" height="200">
+                    </a>
+                </div>
+                <div class="project-card">
+                    <div class="double">
+                        <h2>Find My PetFriend (Updated)</h2>
+                        <p>My Second Project</p>
+                    </div>
+                    <a href="https://pet-adoption-platform.herokuapp.com/" target="blank">
+                    <img class="img-border" src="./images/project-2.png" alt="Eat Da Burger" width="200" height="200">
+                    </a>
+                </div>
 
                 
             </section>
@@ -129,16 +149,21 @@
                     
                 </a>
                 
-                <a href="mailto:acechaseharrington@gmail.com" class="social-icon">email me here!</a>
+                <a href="mailto:acechaseharrington@gmail.com" class="social-icon">
+                    <i class="fa fa-envelope-square fa-3x" aria-hidden="true"></i>
+                </a>
 
-                <a href="5129619228" class="social-icon">5129619228</a>
+                <span id="phone" class="social-icon">
+                    <i class="fa fa-phone-square fa-3x" aria-hidden="true"></i>
+                </span>
                 
             </section>
             
          </div>
     </main>
 
-    
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./assets/index.js"></script>    
     
 
 </body>

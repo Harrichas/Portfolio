@@ -1,44 +1,170 @@
-    body {
-        display: flex;
-        flex-direction: column;
-        line-height: 1.3;
-        background-color:  #13293d;
-        color:white;
+  body {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+      background-color:  #13293d;
+      color:white;
 }
     /*header section*/
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10%;
-        background-image: url("../images/cool-background.png");
-        background-size: cover;
+  /* navbar */
+a{
+  color: #000;
+}
+
+.header{
+  background-color: #f2dec5;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index:3;
+}
+
+.header ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #a7bbbc;
+}
+
+.header ul a{
+  display: block;
+  padding: 20px;
+  border-right: 1px solid #aaa;
+  text-decoration: none;
+}
+
+.header ul a:hover{
+  background-color: #ddd;
+}
+
+.header .logo{
+  float: left;
+  display: block;
+  font-size: 2em;
+  padding: 10px 20px;
+}
+
+.header .menu{
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.header .menu-icon{
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.header .menu-icon .nav-icon{
+  background: #333;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon:after{
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  top: -5px;
+}
+
+.header .menu-btn{
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu{
+  max-height: 300px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media(min-width: 996px) {
+  .header li {
+    float: left;
   }
+  .header li a{
+    padding: 20px 30px;
+  }
+  .header .menu{
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon{
+    display: none;
+  }
+}
+
+  header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-image: url("../images/cool-background.png");
+      background-size: cover;
+      padding-top: 80px;
+}
 
   header nav ul li {
-        display: inline;
-        padding: 8px;
-        font-size: 25px;
-  }
+      display: inline;
+      padding: 8px;
+      font-size: 25px;
+}
 
   .name {
     font-size: 30px;
     padding-left: 5%;
-    color: red;
+    color: #54248e;
+}
+
+  .picture {
+    border-radius: 50%;
   }
 
 /*main section left*/
 
   .column-left {
 
-        width: 25%;
-        height: 100%;
-        display: block;
-        float: left;
-        padding: 0 5% 5% 5%;
-        margin-top: 5%;
-  }
+    width: 25%;
+    height: 100%;
+    display: block;
+    float: left;
+    padding: 0 5% 5% 5%;
+    margin-top: 5%;
+}
 
   .row {
     display: block;
@@ -48,7 +174,7 @@
     padding-left: 10%;
     padding-right: 10%;
     clear: both;
-  }
+}
 
   /*main right*/
 
@@ -58,7 +184,7 @@
         display: block;
         float: right;
         padding: 0 5% 5% 5%;
-        border-left: 5px solid lime;
+        border-left: 5px solid #5439c2;
         margin-top: 5%;
 }
  /*Projects*/
@@ -74,7 +200,7 @@
 
     .project-card .double {
         background-color: gray;
-        color: purple;
+        color: #5439c2;
         border: 2px solid white;
         border-radius: 8px;
     }
@@ -89,7 +215,7 @@
     .social-icon {
       margin: 5%;
       background-color: gray;
-      color: purple;
+      color: #5439c2;
       border: 2px solid white;
     }
 
